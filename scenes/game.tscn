@@ -1,0 +1,435 @@
+[gd_scene load_steps=4 format=3 uid="uid://2bnw0ss7o803"]
+
+[ext_resource type="Script" uid="uid://ox70elpelnd2" path="res://scripts/game.gd" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://blnm8okf6nw47" path="res://scenes/block.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://b6twf6h844roa" path="res://scripts/main_grid.gd" id="1_yqjtg"]
+
+[node name="Game" type="Control" node_paths=PackedStringArray("main_grid")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lnu2h")
+main_grid = NodePath("MainGrid")
+metadata/_edit_vertical_guides_ = [80.0, 320.0, 560.0, 800.0]
+metadata/_edit_horizontal_guides_ = [80.0, 320.0, 560.0, 800.0]
+
+[node name="MainGrid" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 800.0
+offset_bottom = 800.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("1_yqjtg")
+
+[node name="GridContainer" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="GridContainer2" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer2" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="GridContainer3" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer3" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="GridContainer4" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer4" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="GridContainer5" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer5" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="GridContainer6" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer6" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="GridContainer7" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer7" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="GridContainer8" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer8" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="GridContainer9" type="GridContainer" parent="MainGrid"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Block" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block2" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block3" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block4" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block5" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block6" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block7" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block8" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Block9" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 80.0
+offset_right = 1200.0
+offset_bottom = 160.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 160.0
+offset_right = 1200.0
+offset_bottom = 240.0
+theme_override_constants/separation = 10
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A"
+
+[node name="Button2" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A"
+
+[node name="Button3" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A"
+
+[node name="Button4" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 320.0
+offset_right = 1200.0
+offset_bottom = 640.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "7"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "8"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "9"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "4"
+
+[node name="Button5" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "5"
+
+[node name="Button6" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "6"
+
+[node name="Button7" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "1"
+
+[node name="Button8" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "2"
+
+[node name="Button9" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "3"
+
+[node name="NewGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 720.0
+offset_right = 1200.0
+offset_bottom = 800.0
+text = "新游戏"
