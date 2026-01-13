@@ -4,11 +4,11 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_3gtdk"]
 font_size = 48
-font_color = Color(0.18039216, 0.21568628, 0.25882354, 1)
+font_color = Color(0.20392157, 0.28235295, 0.38039216, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8r6n6"]
 font_size = 48
-font_color = Color(0.56, 0.6680001, 0.8, 1)
+font_color = Color(0.19607843, 0.3529412, 0.6862745, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_cgrg5"]
 font_size = 15
@@ -18,13 +18,41 @@ font_color = Color(0.56, 0.6680001, 0.8, 1)
 font_size = 48
 font_color = Color(0.8, 0.16799998, 0.16799998, 1)
 
-[node name="Block" type="Control"]
+[node name="Block" type="Control" node_paths=PackedStringArray("selected_color_rect", "deep_selected_color_rect", "fixed_number_control", "fixed_number_label", "editable_number_control", "editable_number_label", "wrong_number_control", "wrong_number_label")]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 80.0
 offset_bottom = 80.0
 script = ExtResource("1_8r6n6")
+selected_color_rect = NodePath("SelectedColor")
+deep_selected_color_rect = NodePath("DeepSelectedColor")
+fixed_number_control = NodePath("FixedNumber")
+fixed_number_label = NodePath("FixedNumber/Label")
+editable_number_control = NodePath("EditableNumber")
+editable_number_label = NodePath("EditableNumber/Label")
+wrong_number_control = NodePath("WrongNumber")
+wrong_number_label = NodePath("WrongNumber/Label")
+
+[node name="SelectedColor" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8862745, 0.92156863, 0.9529412, 1)
+
+[node name="DeepSelectedColor" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.73333335, 0.87058824, 0.9843137, 1)
 
 [node name="FixedNumber" type="Control" parent="."]
 visible = false
@@ -192,3 +220,14 @@ text = "0"
 label_settings = SubResource("LabelSettings_4kun4")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

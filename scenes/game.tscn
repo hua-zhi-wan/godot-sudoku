@@ -1,20 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://2bnw0ss7o803"]
+[gd_scene load_steps=6 format=3 uid="uid://2bnw0ss7o803"]
 
 [ext_resource type="Script" uid="uid://ox70elpelnd2" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://blnm8okf6nw47" path="res://scenes/block.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://b6twf6h844roa" path="res://scripts/main_grid.gd" id="1_yqjtg"]
+[ext_resource type="Theme" uid="uid://c8bcqy5nwxwrk" path="res://sudoku_deep.tres" id="4_lbhrr"]
 
-[node name="Game" type="Control" node_paths=PackedStringArray("main_grid")]
+[sub_resource type="LabelSettings" id="LabelSettings_lbhrr"]
+font_color = Color(0.3529412, 0.48235294, 0.7529412, 1)
+
+[node name="Game" type="Control" node_paths=PackedStringArray("main_grid", "fault_label", "time_label")]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 880.0
 script = ExtResource("1_lnu2h")
 main_grid = NodePath("MainGrid")
-metadata/_edit_vertical_guides_ = [80.0, 320.0, 560.0, 800.0]
-metadata/_edit_horizontal_guides_ = [80.0, 320.0, 560.0, 800.0]
+fault_label = NodePath("FaultLabel")
+time_label = NodePath("TimeLabel")
+metadata/_edit_vertical_guides_ = [80.0, 320.0, 560.0, 800.0, 880.0, 1200.0]
+metadata/_edit_horizontal_guides_ = [80.0, 320.0, 560.0, 800.0, 880.0, 1200.0]
 
 [node name="MainGrid" type="GridContainer" parent="."]
 layout_mode = 0
@@ -333,65 +337,59 @@ layout_mode = 2
 [node name="Block9" parent="MainGrid/GridContainer9" instance=ExtResource("1_uwrxv")]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 880.0
-offset_top = 80.0
-offset_right = 1200.0
-offset_bottom = 160.0
-
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 880.0
-offset_top = 160.0
+offset_top = 256.0
 offset_right = 1200.0
-offset_bottom = 240.0
+offset_bottom = 336.0
 theme_override_constants/separation = 10
 alignment = 1
 metadata/_edit_group_ = true
 
-[node name="Button" type="Button" parent="HBoxContainer2"]
+[node name="UndoButton" type="Button" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "A"
+text = "🔁"
 
-[node name="Button2" type="Button" parent="HBoxContainer2"]
+[node name="EraseButton" type="Button" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "A"
+text = "🛠️"
 
-[node name="Button3" type="Button" parent="HBoxContainer2"]
+[node name="DraftButton" type="Button" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "A"
+toggle_mode = true
+text = "✏️"
 
-[node name="Button4" type="Button" parent="HBoxContainer2"]
+[node name="HintButton" type="Button" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "A"
+text = "💡"
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
 offset_left = 880.0
-offset_top = 320.0
+offset_top = 368.0
 offset_right = 1200.0
-offset_bottom = 640.0
+offset_bottom = 688.0
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 columns = 3
 metadata/_edit_group_ = true
 
-[node name="Button" type="Button" parent="GridContainer"]
+[node name="Button7" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "7"
 
-[node name="Button2" type="Button" parent="GridContainer"]
+[node name="Button8" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "8"
 
-[node name="Button3" type="Button" parent="GridContainer"]
+[node name="Button9" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "9"
@@ -411,17 +409,17 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "6"
 
-[node name="Button7" type="Button" parent="GridContainer"]
+[node name="Button1" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "1"
 
-[node name="Button8" type="Button" parent="GridContainer"]
+[node name="Button2" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "2"
 
-[node name="Button9" type="Button" parent="GridContainer"]
+[node name="Button3" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "3"
@@ -432,4 +430,41 @@ offset_left = 880.0
 offset_top = 720.0
 offset_right = 1200.0
 offset_bottom = 800.0
+theme = ExtResource("4_lbhrr")
 text = "新游戏"
+
+[node name="FaultLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 80.0
+offset_right = 1040.0
+offset_bottom = 200.0
+text = "错误
+0/3"
+label_settings = SubResource("LabelSettings_lbhrr")
+vertical_alignment = 2
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 80.0
+offset_right = 1200.0
+offset_bottom = 200.0
+text = "时间
+00:00"
+label_settings = SubResource("LabelSettings_lbhrr")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="block_selected" from="MainGrid" to="." method="_on_main_grid_block_selected"]
+[connection signal="pressed" from="HBoxContainer2/EraseButton" to="." method="input_number" binds= [0]]
+[connection signal="pressed" from="GridContainer/Button7" to="." method="input_number" binds= [7]]
+[connection signal="pressed" from="GridContainer/Button8" to="." method="input_number" binds= [8]]
+[connection signal="pressed" from="GridContainer/Button9" to="." method="input_number" binds= [9]]
+[connection signal="pressed" from="GridContainer/Button4" to="." method="input_number" binds= [4]]
+[connection signal="pressed" from="GridContainer/Button5" to="." method="input_number" binds= [5]]
+[connection signal="pressed" from="GridContainer/Button6" to="." method="input_number" binds= [6]]
+[connection signal="pressed" from="GridContainer/Button1" to="." method="input_number" binds= [1]]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="input_number" binds= [2]]
+[connection signal="pressed" from="GridContainer/Button3" to="." method="input_number" binds= [3]]
+[connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]
