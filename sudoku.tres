@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bulqgnyk4wxxk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_er1nf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_er1nf"]
+bg_color = Color(0.91764706, 0.93333334, 0.95686275, 1)
+border_width_bottom = 8
+border_color = Color(0.837, 0.8706, 0.9, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m125r"]
+content_margin_top = 8.0
+bg_color = Color(0.3529412, 0.48235294, 0.7529412, 1)
+border_width_top = 8
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+Button/colors/font_color = Color(0.19607843, 0.3529412, 0.6862745, 1)
+Button/colors/font_focus_color = Color(0.19607843, 0.3529412, 0.6862745, 1)
+Button/colors/font_hover_color = Color(0.19607843, 0.3529412, 0.6862745, 1)
+Button/font_sizes/font_size = 40
+Button/styles/focus = SubResource("StyleBoxEmpty_er1nf")
+Button/styles/hover = SubResource("StyleBoxFlat_er1nf")
+Button/styles/normal = SubResource("StyleBoxFlat_er1nf")
+Button/styles/pressed = SubResource("StyleBoxFlat_m125r")
